@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redes Sociales</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* VIDEO COMO FONDO */
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* CONTENEDOR PRINCIPAL */
+        .container {
+            position: relative;
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            z-index: 1;
+        }
+
+        /* CENTRAR CONTENIDO */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .link {
+            width: 90px;
+            height: 90px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #000;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            color: black;
+            background-color: #fff;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+
+        .link img {
+            width: 70%;
+            height: 70%;
+            object-fit: cover;
+        }
+
+        /* BOTÓN DENTRO DEL ENLACE */
+        .link button {
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ff5733;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            padding: 5px 10px;
+            font-size: 12px;
+            display: none;
+        }
+
+        .link:hover button {
+            display: block;
+        }
+
+        /* BOTÓN GLOBAL */
+        .button-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 2;
+        }
+
+        .custom-button {
+            padding: 10px 20px;
+            background-color: #ff5733;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .custom-button:hover {
+            background-color: #c70039;
+        }
+
+        /* MENSAJE EMERGENTE */
+        .popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            display: none;
+            z-index: 3;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        function createElements() {
+            // CREAR VIDEO DE FONDO
+            const videoContainer = document.createElement("div");
+            videoContainer.className = "video-container";
+
+            const video = document.createElement("video");
+            video.id = "bgVideo";
+            video.autoplay = true;
+            video.loop = true;
+            video.muted = true;
+
+            const source = document.createElement("source");
+            source.src = "C:/Users/SENA/Desktop/links/13232-246463976_small.mp4";
+            source.type = "video/mp4";
+
+            video.appendChild(source);
+            videoContainer.appendChild(video);
+            document.body.appendChild(videoContainer);
+
+            // CREAR CONTENEDOR PRINCIPAL
+            const container = document.createElement("div");
+            container.className = "container";
+
+            // CREAR CONTENEDOR DE ENLACES
+            const linksContainer = document.createElement("div");
+            linksContainer.className = "links";
+
+            // DATOS DE LOS ENLACES
+            const socialLinks = [
+                { href: "https://www.instagram.com", imgSrc: "icono-instagram-logotipo-insignia-moderna_578229-124.avif", alt: "Instagram" },
+                { href: "https://www.youtube.com", imgSrc: "png-transparent-youtube-logo-youtube-logo-computer-icons-subscribe-angle-rectangle-airplane-thumbnail.png", alt: "YouTube" },
+                { href: "https://www.facebook.com", imgSrc: "facebook-logo-facebook-icon-transparent-free-png.webp", alt: "Facebook" }
+            ];
+
+            // CREAR LOS ENLACES DINÁMICAMENTE
+            socialLinks.forEach(social => {
+                const link = document.createElement("a");
+                link.href = social.href;
+                link.className = "link";
+                link.target = "_blank";
+
+                const img = document.createElement("img");
+                img.src = social.imgSrc;
+                img.alt = social.alt;
+
+                // CREAR BOTÓN DENTRO DEL ENLACE
+                const button = document.createElement("button");
+                button.textContent = "Ir";
+                button.addEventListener("click", (event) => {
+                    event.stopPropagation(); // Evita conflictos con el clic del enlace
+                    window.open(social.href, "_blank");
+                });
+
+                link.appendChild(img);
+                link.appendChild(button); // Agregamos el botón dentro del enlace
+                linksContainer.appendChild(link);
+            });
+
+            container.appendChild(linksContainer);
+            document.body.appendChild(container);
+
+            // NUEVA INTERACCIÓN: CREAR UN BOTÓN QUE MUESTRA UN MENSAJE EMERGENTE
+            const buttonContainer = document.createElement("div");
+            buttonContainer.className = "button-container";
+
+            const button = document.createElement("button");
+            button.className = "custom-button";
+            button.textContent = "Mostrar Mensaje";
+
+            // CREAR EL MENSAJE EMERGENTE
+            const popup = document.createElement("div");
+            popup.className = "popup";
+            popup.textContent = "¡Bienvenido a nuestra página de redes sociales!";
+
+            // MOSTRAR Y OCULTAR MENSAJE EMERGENTE
+            button.addEventListener("click", () => {
+                popup.style.display = "block";
+                setTimeout(() => {
+                    popup.style.display = "none";
+                }, 3000); // Se oculta en 3 segundos
+            });
+
+            buttonContainer.appendChild(button);
+            document.body.appendChild(buttonContainer);
+            document.body.appendChild(popup);
+        }
+
+        // LLAMAMOS A LA FUNCIÓN PARA CREAR LOS ELEMENTOS AL CARGAR LA PÁGINA
+        createElements();
+    </script>
+
+</body>
+</html>

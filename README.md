@@ -58,3 +58,23 @@ Video
 El video de fondo debe estar disponible en el sistema de archivos local o en un servidor accesible.
 Imágenes
 Los íconos de las redes sociales deben estar disponibles en el sistema de archivos local o en un servidor accesible.
+
+Distribución de tiempo para las tareas:
+
+Tareas Prioritarias y Estimación de Tiempo
+1. Crear la estructura básica del proyecto
+Descripción: Configurar un nuevo proyecto HTML y crear el archivo index.html.
+Tiempo Estimado: 15 minutos
+Justificación: Esta tarea es fundamental y rápida, ya que solo implica crear el archivo y la estructura básica.
+2. Integrar el video de fondo
+Descripción: Agregar el video al contenedor y configurar los atributos autoplay, loop y muted.
+Tiempo Estimado: 30 minutos
+Justificación: Esta tarea requiere tiempo para asegurarse de que el video se integre correctamente y se vea bien en el fondo.
+3. Crear enlaces a redes sociales
+Descripción: Implementar los enlaces a Instagram, YouTube y Facebook en el contenedor principal.
+Tiempo Estimado: 45 minutos
+Justificación: Esta tarea implica crear los enlaces y asegurarse de que cada uno funcione correctamente, lo que puede llevar un poco más de tiempo.
+4. Implementar el mensaje emergente
+Descripción: Crear el botón que muestre un mensaje emergente y la lógica para mostrarlo y ocultarlo.
+Tiempo Estimado: 30 minutos
+Justificación: Esta tarea requiere tanto la creación del botón como la implementación de la lógica en JavaScript, lo que puede llevar tiempo.

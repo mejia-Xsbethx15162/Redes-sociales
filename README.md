@@ -61,20 +61,70 @@ Los íconos de las redes sociales deben estar disponibles en el sistema de archi
 
 Distribución de tiempo para las tareas:
 
-Tareas Prioritarias y Estimación de Tiempo
-1. Crear la estructura básica del proyecto
+Tareas Principales y Estimación de Tiempo
+1. Configuración del Proyecto
+Tarea 1: Crear la estructura básica del proyecto
+
 Descripción: Configurar un nuevo proyecto HTML y crear el archivo index.html.
 Tiempo Estimado: 15 minutos
-Justificación: Esta tarea es fundamental y rápida, ya que solo implica crear el archivo y la estructura básica.
-2. Integrar el video de fondo
+Tarea 2: Configurar el entorno de desarrollo
+
+Descripción: Asegurarse de que el entorno de desarrollo esté listo para trabajar con HTML, CSS y JavaScript.
+Tiempo Estimado: 10 minutos
+2. Implementación del Video de Fondo
+Tarea 3: Crear el contenedor del video
+
+Descripción: Implementar el contenedor del video en el HTML y aplicar estilos CSS para que ocupe toda la pantalla.
+Tiempo Estimado: 20 minutos
+Tarea 4: Integrar el video de fondo
+
 Descripción: Agregar el video al contenedor y configurar los atributos autoplay, loop y muted.
 Tiempo Estimado: 30 minutos
-Justificación: Esta tarea requiere tiempo para asegurarse de que el video se integre correctamente y se vea bien en el fondo.
-3. Crear enlaces a redes sociales
+3. Desarrollo del Contenedor Principal
+Tarea 5: Crear el contenedor principal
+
+Descripción: Implementar el contenedor que contendrá los enlaces a las redes sociales y aplicar estilos CSS.
+Tiempo Estimado: 20 minutos
+Tarea 6: Estilizar el contenedor principal
+
+Descripción: Aplicar estilos CSS para el fondo, bordes, sombra y centrado del contenedor.
+Tiempo Estimado: 15 minutos
+4. Implementación de Enlaces a Redes Sociales
+Tarea 7: Crear enlaces a redes sociales
+
 Descripción: Implementar los enlaces a Instagram, YouTube y Facebook en el contenedor principal.
-Tiempo Estimado: 45 minutos
-Justificación: Esta tarea implica crear los enlaces y asegurarse de que cada uno funcione correctamente, lo que puede llevar un poco más de tiempo.
-4. Implementar el mensaje emergente
-Descripción: Crear el botón que muestre un mensaje emergente y la lógica para mostrarlo y ocultarlo.
 Tiempo Estimado: 30 minutos
-Justificación: Esta tarea requiere tanto la creación del botón como la implementación de la lógica en JavaScript, lo que puede llevar tiempo.
+Tarea 8: Agregar íconos a los enlaces
+
+Descripción: Incluir imágenes representativas para cada red social y aplicar estilos.
+Tiempo Estimado: 15 minutos
+Tarea 9: Implementar el botón dentro de cada enlace
+
+Descripción: Crear un botón dentro de cada enlace que abra la red social en una nueva pestaña.
+Tiempo Estimado: 20 minutos
+5. Desarrollo del Mensaje Emergente
+Tarea 10: Crear el botón de mensaje emergente
+
+Descripción: Implementar un botón que muestre un mensaje emergente al hacer clic.
+Tiempo Estimado: 20 minutos
+Tarea 11: Implementar el mensaje emergente
+
+Descripción: Crear el mensaje emergente y aplicar estilos CSS para que sea visible y atractivo.
+Tiempo Estimado: 15 minutos
+Tarea 12: Configurar la lógica para mostrar y ocultar el mensaje
+
+Descripción: Implementar la lógica en JavaScript para mostrar el mensaje y ocultarlo después de 3 segundos.
+Tiempo Estimado: 20 minutos
+6. Pruebas y Ajustes Finales
+Tarea 13: Realizar pruebas de funcionalidad
+
+Descripción: Probar todos los enlaces y la funcionalidad del mensaje emergente para asegurarse de que todo funcione correctamente.
+Tiempo Estimado: 20 minutos
+Tarea 14: Ajustar estilos y diseño responsivo
+
+Descripción: Revisar y ajustar los estilos para asegurar que la página sea responsiva y se vea bien en diferentes dispositivos.
+Tiempo Estimado: 20 minutos
+Tarea 15: Documentar el proyecto
+
+Descripción: Crear documentación sobre el proyecto, incluyendo instrucciones de uso y detalles técnicos.
+Tiempo Estimado: 15 minutos
